@@ -8,7 +8,6 @@ steps:
     commands:
       - node test.js
 
-steps:
   - name: say-hello2
     image: node:latest
     commands:
