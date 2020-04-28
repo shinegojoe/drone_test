@@ -7,3 +7,9 @@ steps:
     image: node:latest
     commands:
       - node test.js
+
+steps:
+  - name: say-hello2
+    image: node:latest
+    commands:
+      - bash test2.sh
