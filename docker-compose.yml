@@ -17,12 +17,13 @@ services:
       - DRONE_SERVER_HOST=b890a7a6.ngrok.io
       - DRONE_SERVER_PROTO=https
   drone-agent:
-    image: drone/drone:1
+    image: drone/agent:1
     command: agent
     depends_on:
       - drone-server
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - DRONE_SERVER=drone-server:9000
+      - DRONE_RPC_HOST=drone-server
+      - DRONE_RPC_PROTO=http
       - DRONE_RPC_SECRET=ALQU2M0KdptXUdTPKcEw
