@@ -1,5 +1,9 @@
-pipeline:
-   backend:
-     image: node_test
-     commands:
-        - echo hello-world
+kind: pipeline
+name: hello-world123
+type: docker
+
+steps:
+  - name: say-hello
+    image: busybox
+    commands:
+      - echo hello-world
