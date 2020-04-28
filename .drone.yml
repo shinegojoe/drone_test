@@ -1,6 +1,4 @@
 pipeline:
    backend:
-     image: golang
      commands:
-       - go build
-       - go test
+       - node test.js
