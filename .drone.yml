@@ -1,9 +1,7 @@
-kind: pipeline
-name: hello-world
-type: docker
-
-steps:
-  - name: say-hello
-    image: busybox
-    commands:
-      - echo hello-world
+pipeline:
+  build:
+    image: node:latest
+    commands: npm install
+  test:
+    image: node:latest
+    commands: npm run test
