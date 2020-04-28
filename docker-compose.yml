@@ -1,0 +1,27 @@
+version: '2'
+services:
+  drone-server:
+    image: drone/drone:1
+    ports:
+      - 80:80
+    volumes:
+      - ./drone:/var/lib/drone/
+    environment:
+      - DRONE_OPEN=true
+      - DRONE_GITHUB=true
+      - DRONE_GITHUB_CLIENT_ID=deea7d7b4f635516d260
+      - DRONE_GITHUB_CLIENT_SECRET=4097dfe394cc14b68cfa7b334a708b722387b358
+
+      - DRONE_RPC_SECRET=ALQU2M0KdptXUdTPKcEw
+      - DRONE_SERVER_HOST=b890a7a6.ngrok.io
+      - DRONE_SERVER_PROTO=https
+  drone-agent:
+    image: drone/drone:1
+    command: agent
+    depends_on:
+      - drone-server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DRONE_SERVER=ws://drone-server:8000/ws/broker
+      - DRONE_RPC_SECRET=ALQU2M0KdptXUdTPKcEw
