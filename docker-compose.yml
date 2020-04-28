@@ -23,5 +23,5 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - DRONE_SERVER=ws://drone-server:8000/ws/broker
+      - DRONE_SERVER=ws://drone-server:80/ws/broker
       - DRONE_RPC_SECRET=ALQU2M0KdptXUdTPKcEw
