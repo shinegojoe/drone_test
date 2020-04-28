@@ -4,6 +4,7 @@ services:
     image: drone/drone:1
     ports:
       - 80:80
+      - 9000:9000
     volumes:
       - ./drone:/var/lib/drone/
     environment:
@@ -23,5 +24,5 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - DRONE_SERVER=ws://drone-server:80/ws/broker
+      - DRONE_SERVER=drone-server:9000
       - DRONE_RPC_SECRET=ALQU2M0KdptXUdTPKcEw
