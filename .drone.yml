@@ -1,4 +1,5 @@
 pipeline:
    backend:
+     image: node_test
      commands:
        - node test.js
