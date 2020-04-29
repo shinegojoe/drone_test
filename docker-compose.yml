@@ -25,5 +25,5 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - DRONE_RPC_HOST=drone-server
-      - DRONE_RPC_PROTO=http
+      - DRONE_RPC_PROTO=https
       - DRONE_RPC_SECRET=ALQU2M0KdptXUdTPKcEw
