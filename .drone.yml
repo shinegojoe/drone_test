@@ -12,3 +12,5 @@ steps:
     image: node:latest
     commands:
       - bash test2.sh
+      - npm install
+      - npm run standard-test

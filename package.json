@@ -1,0 +1,24 @@
+{
+  "name": "drone_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "standard_test": "standard && node standard_test.js",
+    "xx": "node standard_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinegojoe/drone_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shinegojoe/drone_test/issues"
+  },
+  "homepage": "https://github.com/shinegojoe/drone_test#readme",
+  "devDependencies": {
+    "standard": "^14.3.3"
+  }
+}
