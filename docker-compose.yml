@@ -14,8 +14,8 @@ services:
       - DRONE_GITHUB_CLIENT_SECRET=4097dfe394cc14b68cfa7b334a708b722387b358
 
       - DRONE_RPC_SECRET=ALQU2M0KdptXUdTPKcEw
-      - DRONE_SERVER_HOST=98d7b3f4.ngrok.io
-      - DRONE_SERVER_PROTO=https
+      - DRONE_SERVER_HOST=t-shirtcreator.com
+      - DRONE_SERVER_PROTO=http
   drone-agent:
     image: drone/agent:1
     command: agent
