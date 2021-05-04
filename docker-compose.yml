@@ -27,3 +27,5 @@ services:
       - DRONE_RPC_HOST=drone-server
       - DRONE_RPC_PROTO=https
       - DRONE_RPC_SECRET=ALQU2M0KdptXUdTPKcEw
+      - DRONE_AGENTS_DISABLED=true
+
