@@ -8,9 +8,9 @@ steps:
     commands:
       - node test.js
 
-  - name: say-hello2
-    image: node:latest
-    commands:
-      - bash test2.sh
-      - npm install
-      - npm run standard-test
+  # - name: say-hello2
+  #   image: node:latest
+  #   commands:
+  #     - bash test2.sh
+  #     - npm install
+  #     - npm run standard-test
