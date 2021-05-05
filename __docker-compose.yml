@@ -13,15 +13,9 @@ services:
       - DRONE_GITHUB_CLIENT_ID=deea7d7b4f635516d260
       - DRONE_GITHUB_CLIENT_SECRET=4097dfe394cc14b68cfa7b334a708b722387b358
 
-
-
-        # - DRONE_AGENTS_ENABLED=true
-        # - DRONE_TLS_AUTOCERT=false
-        # - DRONE_RPC_SECRET=ec9165664ef6f69554bdb38c7a24ad61
-      - DRONE_HOST=t-shirtcreator.com
-      - DRONE_PROTO=http
-      - DRONE_SECRET=ec9165664ef6f69554bdb38c7a24ad61
-
+      - DRONE_RPC_SECRET=ec9165664ef6f69554bdb38c7a24ad61
+      - DRONE_SERVER_HOST=t-shirtcreator.com
+      - DRONE_SERVER_PROTO=http
   drone-agent:
     image: drone/agent:1
     command: agent
@@ -30,11 +24,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - DRONE_SERVER=drone-server:9000
-      - DRONE_SECRET=ec9165664ef6f69554bdb38c7a24ad61
-            #- DRONE_RPC_SERVER=http://drone-server
-            #- DRONE_RPC_SECRET=drone-secret
-            #- DRONE_RUNNER_CAPACITY=3
-
-
+      - DRONE_RPC_HOST=drone-server
+      - DRONE_RPC_PROTO=https
+      - DRONE_RPC_SECRET=ec9165664ef6f69554bdb38c7a24ad61
 
