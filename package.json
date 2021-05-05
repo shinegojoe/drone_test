@@ -1,12 +1,12 @@
 {
   "name": "drone_test",
   "version": "1.0.0",
-  "description": "",
   "main": "test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "standard_test": "standard && node standard_test.js",
-    "xx": "node standard_test.js"
+    "xx": "node standard_test.js",
+    "start:dev": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,9 @@
   "homepage": "https://github.com/shinegojoe/drone_test#readme",
   "devDependencies": {
     "standard": "^14.3.3"
+  },
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
