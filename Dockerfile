@@ -1,0 +1,25 @@
+
+FROM ubuntu:18.04
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Install any needed packages specified in requirements.txt
+COPY src ./
+
+RUN apt update
+RUN apt install nodejs
+
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
+
+# Define environment variable
+
+
+# Run app.py when the container launches
+# CMD ["python3 main.py"]
+
+# apt update \
+#&&  apt install software-properties-common \
+# &&  add-apt-repository ppa:deadsnakes/ppa \
+# && sudo apt update \
