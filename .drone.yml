@@ -8,6 +8,16 @@ steps:
     commands:
       - node test.js
 
+  - name: notify
+    image: drillster/drone-email
+    settings:
+      from: noreply@github.com
+      host: smtp.mailgun.org
+      username: octocat
+      password: 12345
+      recipients:
+        - shinegojoe@gmail.com
+
   # - name: say-hello2
   #   image: node:latest
   #   commands:
