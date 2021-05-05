@@ -26,5 +26,5 @@ services:
     environment:
       - DRONE_RPC_HOST=drone-server
       - DRONE_RPC_PROTO=https
-      - DRONE_RPC_SECRET=ec9165664ef6f69554bdb38c7a24ad61
+      - DRONE_RPC_SECRET=4ec9165664ef6f69554bdb38c7a24ad61
 
